@@ -1,12 +1,5 @@
 from __future__ import annotations
 
-# --- Goalie stats (season-to-date) ---
-goalie_profiles = {}
-try:
-    goalie_payload = nhl_api.get_goalie_stats_current(session=session)
-    goalie_profiles = parse_goalie_leaders(goalie_payload)
-except Exception:
-    goalie_profiles = {}
 
 import json
 from datetime import date, datetime, timedelta
@@ -109,7 +102,7 @@ def update_home_model(team_id: int, residual_home: float, home_model: dict) -> N
     s["n"] = int(s.get("n", 0)) + 1
     home_model[str(team_id)] = s
 
-def rebuild_ratings_to(target: date, state: dict):
+def rebuild_ratings_to(target: date, state: dict, session):
     season = season_from_date(target)
     seasons = state["seasons"]
     sstate = seasons.get(season)
@@ -374,13 +367,11 @@ def goalie_recent_sv(goalie_id: int, team_id: int, today: date, box_cache: dict,
             return box_cache[key]
         if box_cache.get("_new_fetches", 0) >= GOALIE_MAX_NEW_BOXSCORES_PER_RUN:
             return None
-        try:
             box = nhl_api.get_boxscore(game_id, session=session)
             box_cache[key] = box
             box_cache["_new_fetches"] = box_cache.get("_new_fetches", 0) + 1
             new_fetches = box_cache["_new_fetches"]
             return box
-        except Exception:
             return None
 
     # Scan back day by day
@@ -396,9 +387,7 @@ def goalie_recent_sv(goalie_id: int, team_id: int, today: date, box_cache: dict,
             game_id = basic.get("gamePk") or g.get("id") or g.get("gamePk")
             if game_id is None:
                 continue
-            try:
                 game_id = int(game_id)
-            except Exception:
                 continue
 
             box = get_box(game_id)
@@ -410,18 +399,14 @@ def goalie_recent_sv(goalie_id: int, team_id: int, today: date, box_cache: dict,
 
             # Find goalie stats; starter flags are best, but for historical games we just match goalie_id and
             # use the goalie line with that id.
-            try:
                 goalies = box["playerByGameStats"][team_side]["goalies"]
-            except Exception:
                 continue
 
             for gl in goalies:
                 pid = gl.get("playerId")
                 if pid is None:
                     continue
-                try:
                     pid = int(pid)
-                except Exception:
                     continue
                 if pid != goalie_id:
                     continue
@@ -434,10 +419,8 @@ def goalie_recent_sv(goalie_id: int, team_id: int, today: date, box_cache: dict,
                 goals_against = gl.get("goalsAgainst") or gl.get("goals") or gl.get("goalsAgainstTotal")
                 if shots_against is None or goals_against is None:
                     continue
-                try:
                     sa = int(shots_against)
                     ga = int(goals_against)
-                except Exception:
                     continue
                 if sa <= 0:
                     continue
@@ -445,12 +428,10 @@ def goalie_recent_sv(goalie_id: int, team_id: int, today: date, box_cache: dict,
                 if starter is False:
                     continue
                 if starter is None and toi:
-                    try:
                         mm, ss = str(toi).split(":")
                         minutes = int(mm) + int(ss)/60.0
                         if minutes < 30.0:
                             continue
-                    except Exception:
                         pass
 
                 saves = sa - ga
@@ -484,8 +465,17 @@ def goalie_points_from_recent(goalie, recent_sv: float|None, recent_starts: int)
     return float(pts)
 
 FALLBACK_TO_PREVIOUS_PICKS = True
+def main():n = nhl_api._session()
 
-def main():
+    # --- Goalie stats (season-to-date) ---
+    goalie_profiles = {}
+    try:
+        goalie_payload = nhl_api.get_goalie_stats_current(session=session)
+        goalie_profiles = parse_goalie_leaders(goalie_payload)
+    except Exception:
+        goalie_profiles = {}
+
+
     today = date.today()
     dates = [today + timedelta(days=i) for i in range(0, 8)]
 
@@ -496,7 +486,7 @@ def main():
     box_cache["_new_fetches"] = 0
 
     try:
-        ratings, build_note, logs, home_model = rebuild_ratings_to(ratings_day, state)
+        ratings, build_note, logs, home_model = rebuild_ratings_to(ratings_day, state, session)
     except RuntimeError as e:
         if FALLBACK_TO_PREVIOUS_PICKS and PICKS_PATH.exists():
             print(f"WARN: rebuild failed ({e}); keeping previous picks.json")
