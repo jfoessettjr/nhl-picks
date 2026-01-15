@@ -460,7 +460,6 @@ def goalie_recent_sv(goalie_id: int, team_id: int, today: date, box_cache: dict,
 
 
 def goalie_points_from_recent(goalie, recent_sv: float|None, recent_starts: int) -> float:
-(goalie, recent_sv: float|None, recent_starts: int) -> float:
     """Blend season profile with recent starts. If recent available, it dominates with a shrink.
     We use baseline LEAGUE_AVG_SV from goalies.py and reuse its conversion style.
     """
