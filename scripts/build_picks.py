@@ -1,3 +1,4 @@
+from __future__ import annotations
 
 # --- Goalie stats (season-to-date) ---
 goalie_profiles = {}
@@ -7,7 +8,6 @@ try:
 except Exception:
     goalie_profiles = {}
 
-from __future__ import annotations
 import json
 from datetime import date, datetime, timedelta
 from pathlib import Path
