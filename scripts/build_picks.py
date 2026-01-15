@@ -350,88 +350,97 @@ def top3_for_date(day: date, ratings: dict[int,float], form: dict[int,dict], hom
     return picks[:3]
 
 def goalie_recent_sv(goalie_id: int, team_id: int, today: date, box_cache: dict, session) -> tuple[float|None, int, int]:
-    """Return (sv%, starts_found, new_fetches_used). Uses cached boxscores and fetches as needed.
-    We search backwards up to GOALIE_LOOKBACK_DAYS using the score feed to find games involving team_id,
-    then inspect boxscores to see if goalie_id started and what their shots/saves were.
+    """Return (sv%, starts_found, new_fetches_used).
+
+    Uses cached boxscores and fetches as needed. We search backwards up to GOALIE_LOOKBACK_DAYS using the
+    daily score feed to find games involving `team_id`, then inspect each game's boxscore to see if
+    `goalie_id` started (or played >= ~30 minutes if starter flag is missing) and accumulate saves/shots.
     """
     starts = 0
     shots_total = 0
     saves_total = 0
-    new_fetches = 0
 
-    # Helper to fetch boxscore with cache
+    # Helper to fetch boxscore with cache + per-run cap
     def get_box(game_id: int):
-        nonlocal new_fetches
         key = str(game_id)
         if key in box_cache:
             return box_cache[key]
         if box_cache.get("_new_fetches", 0) >= GOALIE_MAX_NEW_BOXSCORES_PER_RUN:
             return None
+        try:
             box = nhl_api.get_boxscore(game_id, session=session)
             box_cache[key] = box
             box_cache["_new_fetches"] = box_cache.get("_new_fetches", 0) + 1
-            new_fetches = box_cache["_new_fetches"]
             return box
+        except Exception:
             return None
 
-    # Scan back day by day
     d = today - timedelta(days=1)
     earliest = today - timedelta(days=GOALIE_LOOKBACK_DAYS)
+
     while d >= earliest and starts < GOALIE_RECENT_STARTS:
         games = nhl_api.get_score_for_date(d)
         for g in games:
-            # Identify if this game includes the team
             basic = nhl_api.parse_game_basic(g)
             if basic.get("home_team_id") != team_id and basic.get("away_team_id") != team_id:
                 continue
+
             game_id = basic.get("gamePk") or g.get("id") or g.get("gamePk")
             if game_id is None:
                 continue
+            try:
                 game_id = int(game_id)
+            except Exception:
                 continue
 
             box = get_box(game_id)
             if not box:
                 continue
 
-            # Determine which side is the team
             team_side = "homeTeam" if basic.get("home_team_id") == team_id else "awayTeam"
 
-            # Find goalie stats; starter flags are best, but for historical games we just match goalie_id and
-            # use the goalie line with that id.
+            try:
                 goalies = box["playerByGameStats"][team_side]["goalies"]
+            except Exception:
                 continue
 
+            # Find this goalie line
             for gl in goalies:
                 pid = gl.get("playerId")
                 if pid is None:
                     continue
+                try:
                     pid = int(pid)
+                except Exception:
                     continue
                 if pid != goalie_id:
                     continue
 
-                # Prefer starts where starter==true; if flag missing, accept any appearance but only if
-                # the goalie played the majority (use toi)
                 starter = gl.get("starter")
-                toi = gl.get("toi") or gl.get("timeOnIce")  # format like "59:32"
+                toi = gl.get("toi") or gl.get("timeOnIce")  # "59:32"
                 shots_against = gl.get("shotsAgainst") or gl.get("shots") or gl.get("shotsAgainstTotal")
                 goals_against = gl.get("goalsAgainst") or gl.get("goals") or gl.get("goalsAgainstTotal")
+
                 if shots_against is None or goals_against is None:
                     continue
+                try:
                     sa = int(shots_against)
                     ga = int(goals_against)
+                except Exception:
                     continue
                 if sa <= 0:
                     continue
-                # If starter info absent, gate by TOI >= 30:00 (rough)
+
+                # Only count starts
                 if starter is False:
                     continue
                 if starter is None and toi:
+                    try:
                         mm, ss = str(toi).split(":")
-                        minutes = int(mm) + int(ss)/60.0
+                        minutes = int(mm) + int(ss) / 60.0
                         if minutes < 30.0:
                             continue
+                    except Exception:
                         pass
 
                 saves = sa - ga
@@ -442,13 +451,16 @@ def goalie_recent_sv(goalie_id: int, team_id: int, today: date, box_cache: dict,
 
             if starts >= GOALIE_RECENT_STARTS:
                 break
+
         d -= timedelta(days=1)
 
-    if shots_total <= 0 or starts == 0:
-        return (None, starts, new_fetches)
-    return (saves_total / shots_total, starts, new_fetches)
+    if starts == 0 or shots_total <= 0:
+        return (None, starts, int(box_cache.get("_new_fetches", 0)))
+    return (saves_total / shots_total, starts, int(box_cache.get("_new_fetches", 0)))
+
 
 def goalie_points_from_recent(goalie, recent_sv: float|None, recent_starts: int) -> float:
+(goalie, recent_sv: float|None, recent_starts: int) -> float:
     """Blend season profile with recent starts. If recent available, it dominates with a shrink.
     We use baseline LEAGUE_AVG_SV from goalies.py and reuse its conversion style.
     """
