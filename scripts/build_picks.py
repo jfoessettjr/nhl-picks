@@ -2,6 +2,7 @@ from __future__ import annotations
 
 
 import json
+import requests
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from dateutil.tz import tzutc
@@ -102,7 +103,7 @@ def update_home_model(team_id: int, residual_home: float, home_model: dict) -> N
     s["n"] = int(s.get("n", 0)) + 1
     home_model[str(team_id)] = s
 
-def rebuild_ratings_to(target: date, state: dict, session):
+def rebuild_ratings_to(target: date, state: dict):
     season = season_from_date(target)
     seasons = state["seasons"]
     sstate = seasons.get(season)
@@ -127,7 +128,7 @@ def rebuild_ratings_to(target: date, state: dict, session):
     per_team_logs: dict[int, list[dict]] = {}
 
     updates = 0
-    games = nhl_api.get_games_range_weekly(start, target, session=session)
+    games = nhl_api.get_games_range_weekly(start, target)
     for g in games:
             if not nhl_api.is_final(g):
                 continue
@@ -479,7 +480,7 @@ FALLBACK_TO_PREVIOUS_PICKS = True
 
 
 def main():
-    session = nhl_api._session()
+    session = requests.Session()
 
     # --- Goalie stats (season-to-date) ---
     goalie_profiles = {}
@@ -500,7 +501,7 @@ def main():
     box_cache["_new_fetches"] = 0
 
     try:
-        ratings, build_note, logs, home_model = rebuild_ratings_to(ratings_day, state, session)
+        ratings, build_note, logs, home_model = rebuild_ratings_to(ratings_day, state)
     except RuntimeError as e:
         if FALLBACK_TO_PREVIOUS_PICKS and PICKS_PATH.exists():
             print(f"WARN: rebuild failed ({e}); keeping previous picks.json")
