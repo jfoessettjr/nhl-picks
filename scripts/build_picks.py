@@ -43,6 +43,12 @@ GOALIE_RECENT_STARTS = 5
 GOALIE_LOOKBACK_DAYS = 35  # max days to search for recent starts
 GOALIE_MAX_NEW_BOXSCORES_PER_RUN = 120
 
+# Calibration bins
+CAL_BIN_SIZE = 0.05
+CAL_MIN = 0.30
+CAL_MAX = 0.85
+CAL_MAX_HISTORY = 2500
+
 # Probability shrink
 PROB_SHRINK = 0.85
 
@@ -51,6 +57,8 @@ MAX_REBUILD_DAYS = 180
 
 STATE_PATH = Path("docs/data/state.json")
 BOX_CACHE_PATH = Path("docs/data/boxscore_cache.json")
+PICK_HISTORY_PATH = Path("docs/data/pick_history.json")
+CALIBRATION_PATH = Path("docs/data/calibration.json")
 
 PICKS_PATH = Path("docs/data/picks.json")
 
@@ -479,6 +487,117 @@ def goalie_points_from_recent(goalie, recent_sv: float|None, recent_starts: int)
 FALLBACK_TO_PREVIOUS_PICKS = True
 
 
+
+def _cal_bin_key(p: float) -> float:
+    p2 = max(CAL_MIN, min(CAL_MAX, float(p)))
+    k = (int(p2 / CAL_BIN_SIZE) * CAL_BIN_SIZE)
+    return round(k, 2)
+
+def load_pick_history() -> list[dict]:
+    if PICK_HISTORY_PATH.exists():
+        try:
+            return json.loads(PICK_HISTORY_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            return []
+    return []
+
+def save_pick_history(hist: list[dict]) -> None:
+    PICK_HISTORY_PATH.parent.mkdir(parents=True, exist_ok=True)
+    PICK_HISTORY_PATH.write_text(json.dumps(hist[-CAL_MAX_HISTORY:], indent=2), encoding="utf-8")
+
+def load_calibration() -> dict:
+    if CALIBRATION_PATH.exists():
+        try:
+            return json.loads(CALIBRATION_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            return {"bins": {}}
+    return {"bins": {}}
+
+def save_calibration(cal: dict) -> None:
+    CALIBRATION_PATH.parent.mkdir(parents=True, exist_ok=True)
+    CALIBRATION_PATH.write_text(json.dumps(cal, indent=2), encoding="utf-8")
+
+def calibrate_prob(p: float, cal: dict) -> float:
+    k = str(_cal_bin_key(p))
+    b = (cal.get("bins") or {}).get(k)
+    if not b:
+        return float(p)
+    n = b.get("n", 0)
+    w = b.get("w", 0)
+    if n <= 0:
+        return float(p)
+    return float((w + 1) / (n + 2))  # Laplace smoothing
+
+def _update_calibration_with_result(cal: dict, p: float, outcome: int) -> None:
+    k = str(_cal_bin_key(p))
+    cal.setdefault("bins", {})
+    b = cal["bins"].setdefault(k, {"n": 0, "w": 0})
+    b["n"] += 1
+    b["w"] += int(outcome)
+
+def resolve_history_and_update_calibration(hist: list[dict], cal: dict) -> tuple[list[dict], dict]:
+    """Resolve any unscored picks using score feed and update calibration bins."""
+    by_date: dict[str, list[dict]] = {}
+    for rec in hist:
+        if rec.get("resolved") is True:
+            continue
+        d = rec.get("game_date")
+        if not isinstance(d, str):
+            continue
+        by_date.setdefault(d, []).append(rec)
+
+    for d, recs in by_date.items():
+        try:
+            day = date.fromisoformat(d)
+        except Exception:
+            continue
+        if day >= date.today():
+            continue
+
+        try:
+            games = nhl_api.get_score_for_date(day)
+        except Exception:
+            continue
+
+        game_by_id = {}
+        for g in games:
+            gid = g.get("id") or g.get("gamePk")
+            try:
+                gid_int = int(gid)
+            except Exception:
+                continue
+            game_by_id[gid_int] = g
+
+        for rec in recs:
+            try:
+                gid = int(rec.get("game_id"))
+            except Exception:
+                continue
+            g = game_by_id.get(gid)
+            if not g:
+                continue
+            basic = nhl_api.parse_game_basic(g)
+            if basic.get("status") != "final":
+                continue
+
+            home_goals = basic.get("home_goals")
+            away_goals = basic.get("away_goals")
+            if home_goals is None or away_goals is None:
+                continue
+            winner_team_id = basic["home_team_id"] if home_goals > away_goals else basic["away_team_id"]
+            outcome = 1 if int(rec.get("pick_team_id", -1)) == int(winner_team_id) else 0
+
+            p_full = float(rec.get("p_full_raw", rec.get("p_full", 0.5)))
+            p_reg = float(rec.get("p_reg_raw", rec.get("p_reg", 0.5)))
+            _update_calibration_with_result(cal, p_full, outcome)
+            _update_calibration_with_result(cal, p_reg, outcome)
+
+            rec["resolved"] = True
+            rec["outcome"] = outcome
+            rec["resolved_at"] = datetime.utcnow().isoformat(timespec="seconds") + "Z"
+
+    return hist, cal
+
 def main():
     session = requests.Session()
 
@@ -497,6 +616,9 @@ def main():
     ratings_day = today - timedelta(days=1)
     state = load_state()
     box_cache = load_json(BOX_CACHE_PATH, {})
+    cal = load_calibration()
+    hist = load_pick_history()
+    hist, cal = resolve_history_and_update_calibration(hist, cal)
     # reset per-run fetch counter
     box_cache["_new_fetches"] = 0
 
@@ -530,6 +652,24 @@ def main():
 
     PICKS_PATH.parent.mkdir(parents=True, exist_ok=True)
     PICKS_PATH.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+    # Append today's picks to history for future calibration resolution
+    for p in payload.get("picks", []):
+        hist.append({
+            "game_date": payload.get("date"),
+            "game_id": p.get("game_id"),
+            "pick_team_id": p.get("pick_team_id"),
+            "p_full": p.get("win_prob_full"),
+            "p_reg": p.get("win_prob_reg"),
+            "p_full_raw": p.get("win_prob_full_raw"),
+            "p_reg_raw": p.get("win_prob_reg_raw"),
+            "resolved": False,
+            "created_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+        })
+
+    save_pick_history(hist)
+    save_calibration(cal)
+
 
     # persist boxscore cache (remove ephemeral counter)
     if "_new_fetches" in box_cache:
