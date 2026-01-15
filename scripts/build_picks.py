@@ -476,7 +476,10 @@ def goalie_points_from_recent(goalie, recent_sv: float|None, recent_starts: int)
     return float(pts)
 
 FALLBACK_TO_PREVIOUS_PICKS = True
-def main():n = nhl_api._session()
+
+
+def main():
+    session = nhl_api._session()
 
     # --- Goalie stats (season-to-date) ---
     goalie_profiles = {}
