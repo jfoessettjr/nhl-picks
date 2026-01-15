@@ -53,3 +53,6 @@ Uses free NHL endpoints to add a goalie factor:
 
 ### Goalie recent-start upgrade
 This version optionally replaces the season SV% proxy with **recent-start SV%** (last 5 starts, lookback up to 35 days). It caches boxscores in `docs/data/boxscore_cache.json` and limits new boxscore fetches per run.
+
+- **Goalie workload penalty** (starter on B2B / 2-in-3 from cached recent starts)
+- **Regulation-prob ranking** (rank picks by regulation win probability; display reg vs full)
