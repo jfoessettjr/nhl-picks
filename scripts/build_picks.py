@@ -134,10 +134,8 @@ def rebuild_ratings_to(target: date, state: dict):
     per_team_logs: dict[int, list[dict]] = {}
 
     updates = 0
-    d = start
-    while d <= target:
-        games = nhl_api.get_score_for_date(d)
-        for g in games:
+    games = nhl_api.get_games_range_weekly(start, target, session=session)
+    for g in games:
             if not nhl_api.is_final(g):
                 continue
             basic = nhl_api.parse_game_basic(g)
@@ -178,28 +176,27 @@ def rebuild_ratings_to(target: date, state: dict):
 
             update_home_model(home_id, residual_home, home_model)
 
-            if d >= log_start:
+            game_day = date.fromisoformat(basic["date"])
+            if game_day >= log_start:
                 per_team_logs.setdefault(home_id, []).append({
-                    "date": d.isoformat(),
+                    "date": game_day.isoformat(),
                     "is_home": True,
                     "residual": float(residual_home),
                     "gd": int(home_goals - away_goals),
                 })
                 per_team_logs.setdefault(away_id, []).append({
-                    "date": d.isoformat(),
+                    "date": game_day.isoformat(),
                     "is_home": False,
                     "residual": float(residual_away),
                     "gd": int(away_goals - home_goals),
                 })
 
             new_home, new_away, *_ = update_ratings(
-                r_home_pre, r_away_pre, s_home, gd, d, cfg_game
+                r_home_pre, r_away_pre, s_home, gd, game_day, cfg_game
             )
             ratings[home_id] = new_home
             ratings[away_id] = new_away
             updates += 1
-
-        d += timedelta(days=1)
 
     sstate["ratings"] = {str(k): float(v) for k, v in ratings.items()}
     sstate["last_built"] = target.isoformat()
@@ -486,6 +483,8 @@ def goalie_points_from_recent(goalie, recent_sv: float|None, recent_starts: int)
     pts = max(-MAX_ADJ_PTS, min(MAX_ADJ_PTS, pts))
     return float(pts)
 
+FALLBACK_TO_PREVIOUS_PICKS = True
+
 def main():
     today = date.today()
     dates = [today + timedelta(days=i) for i in range(0, 8)]
@@ -496,7 +495,13 @@ def main():
     # reset per-run fetch counter
     box_cache["_new_fetches"] = 0
 
-    ratings, build_note, logs, home_model = rebuild_ratings_to(ratings_day, state)
+    try:
+        ratings, build_note, logs, home_model = rebuild_ratings_to(ratings_day, state)
+    except RuntimeError as e:
+        if FALLBACK_TO_PREVIOUS_PICKS and PICKS_PATH.exists():
+            print(f"WARN: rebuild failed ({e}); keeping previous picks.json")
+            return
+        raise
 
     form = compute_form_and_rest(today, logs)
 
