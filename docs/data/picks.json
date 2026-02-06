@@ -1,106 +1,35 @@
 {
-  "generated_at": "2026-02-05T13:39:12.963901Z",
+  "generated_at": "2026-02-06T13:34:50.926967Z",
   "dates": [
-    "2026-02-05",
     "2026-02-06",
     "2026-02-07",
     "2026-02-08",
     "2026-02-09",
     "2026-02-10",
     "2026-02-11",
-    "2026-02-12"
+    "2026-02-12",
+    "2026-02-13"
   ],
   "by_date": {
-    "2026-02-05": {
-      "picks": [
-        {
-          "gamePk": 2025020904,
-          "home_name": "Tampa Bay",
-          "away_name": "Florida",
-          "home_elo": 1652.6464669516074,
-          "away_elo": 1481.4653719240905,
-          "pick_name": "Tampa Bay",
-          "win_prob": 0.721330568711015,
-          "factors": "HomeAdv 54 + wOppAdj form +0/+40 + Rest +0/-15",
-          "why": {
-            "base": 0.6939512176506196,
-            "home_ice_pp": 4.882597405516941,
-            "form_pp": -3.511788761084922,
-            "fatigue_pp": 1.3671264616075152,
-            "final": 0.721330568711015
-          },
-          "form_home": "+0",
-          "form_away": "+40",
-          "fat_home": "+0",
-          "fat_away": "-15",
-          "home_adv": 54.43044337310889
-        },
-        {
-          "gamePk": 2025020909,
-          "home_name": "Vegas",
-          "away_name": "Los Angeles",
-          "home_elo": 1494.3681093334062,
-          "away_elo": 1463.4107223011374,
-          "pick_name": "Vegas",
-          "win_prob": 0.682275964306401,
-          "factors": "HomeAdv 48 + wOppAdj form +40/-40 + Rest -15/-15",
-          "why": {
-            "base": 0.5377686731060004,
-            "home_ice_pp": 5.75956521631571,
-            "form_pp": 8.691163903724352,
-            "fatigue_pp": 0.0,
-            "final": 0.682275964306401
-          },
-          "form_home": "+40",
-          "form_away": "-40",
-          "fat_home": "-15",
-          "fat_away": "-15",
-          "home_adv": 48.35193613495921
-        },
-        {
-          "gamePk": 2025020908,
-          "home_name": "Washington",
-          "away_name": "Nashville",
-          "home_elo": 1488.6923402986213,
-          "away_elo": 1462.672135451426,
-          "pick_name": "Washington",
-          "win_prob": 0.6530175561305049,
-          "factors": "HomeAdv 50 + wOppAdj form +0/-40 + Rest +0/-15",
-          "why": {
-            "base": 0.531769797135177,
-            "home_ice_pp": 5.969551843211485,
-            "form_pp": 4.534012278668243,
-            "fatigue_pp": 1.6212117776530643,
-            "final": 0.6530175561305049
-          },
-          "form_home": "+0",
-          "form_away": "-40",
-          "fat_home": "+0",
-          "fat_away": "-15",
-          "home_adv": 49.93985822584339
-        }
-      ],
-      "build_note": "updated 10 finals"
-    },
     "2026-02-06": {
       "picks": [],
-      "build_note": "updated 10 finals"
+      "build_note": "updated 7 finals"
     },
     "2026-02-07": {
       "picks": [],
-      "build_note": "updated 10 finals"
+      "build_note": "updated 7 finals"
     },
     "2026-02-08": {
       "picks": [],
-      "build_note": "updated 10 finals"
+      "build_note": "updated 7 finals"
     },
     "2026-02-09": {
       "picks": [],
-      "build_note": "updated 10 finals"
+      "build_note": "updated 7 finals"
     },
     "2026-02-10": {
       "picks": [],
-      "build_note": "updated 10 finals"
+      "build_note": "updated 7 finals"
     },
     "2026-02-11": {
       "picks": [
@@ -149,7 +78,7 @@
           "home_adv": 55.0
         }
       ],
-      "build_note": "updated 10 finals"
+      "build_note": "updated 7 finals"
     },
     "2026-02-12": {
       "picks": [
@@ -220,7 +149,78 @@
           "home_adv": 55.0
         }
       ],
-      "build_note": "updated 10 finals"
+      "build_note": "updated 7 finals"
+    },
+    "2026-02-13": {
+      "picks": [
+        {
+          "gamePk": 2025090007,
+          "home_name": "Sweden",
+          "away_name": "Finland",
+          "home_elo": 1500.0,
+          "away_elo": 1500.0,
+          "pick_name": "Sweden",
+          "win_prob": 0.5667222394930314,
+          "factors": "HomeAdv 55 + wOppAdj form +0/+0 + Rest +0/+0",
+          "why": {
+            "base": 0.5,
+            "home_ice_pp": 6.6722239493031354,
+            "form_pp": 0.0,
+            "fatigue_pp": 0.0,
+            "final": 0.5667222394930314
+          },
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
+          "home_adv": 55.0
+        },
+        {
+          "gamePk": 2025090008,
+          "home_name": "Slovakia",
+          "away_name": "Italy",
+          "home_elo": 1500.0,
+          "away_elo": 1500.0,
+          "pick_name": "Slovakia",
+          "win_prob": 0.5667222394930314,
+          "factors": "HomeAdv 55 + wOppAdj form +0/+0 + Rest +0/+0",
+          "why": {
+            "base": 0.5,
+            "home_ice_pp": 6.6722239493031354,
+            "form_pp": 0.0,
+            "fatigue_pp": 0.0,
+            "final": 0.5667222394930314
+          },
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
+          "home_adv": 55.0
+        },
+        {
+          "gamePk": 2025090009,
+          "home_name": "Czechia",
+          "away_name": "France",
+          "home_elo": 1500.0,
+          "away_elo": 1500.0,
+          "pick_name": "Czechia",
+          "win_prob": 0.5667222394930314,
+          "factors": "HomeAdv 55 + wOppAdj form +0/+0 + Rest +0/+0",
+          "why": {
+            "base": 0.5,
+            "home_ice_pp": 6.6722239493031354,
+            "form_pp": 0.0,
+            "fatigue_pp": 0.0,
+            "final": 0.5667222394930314
+          },
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
+          "home_adv": 55.0
+        }
+      ],
+      "build_note": "updated 7 finals"
     }
   },
   "notes": {
