@@ -1,20 +1,16 @@
 {
-  "generated_at": "2026-02-10T13:54:10.885872Z",
+  "generated_at": "2026-02-11T13:49:58.768015Z",
   "dates": [
-    "2026-02-10",
     "2026-02-11",
     "2026-02-12",
     "2026-02-13",
     "2026-02-14",
     "2026-02-15",
     "2026-02-16",
-    "2026-02-17"
+    "2026-02-17",
+    "2026-02-18"
   ],
   "by_date": {
-    "2026-02-10": {
-      "picks": [],
-      "build_note": "updated 0 finals"
-    },
     "2026-02-11": {
       "picks": [
         {
@@ -400,6 +396,77 @@
         },
         {
           "gamePk": 2025090021,
+          "home_name": "TBD",
+          "away_name": "TBD",
+          "home_elo": 1500.0,
+          "away_elo": 1500.0,
+          "pick_name": "TBD",
+          "win_prob": 0.5667222394930314,
+          "factors": "HomeAdv 55 + wOppAdj form +0/+0 + Rest +0/+0",
+          "why": {
+            "base": 0.5,
+            "home_ice_pp": 6.6722239493031354,
+            "form_pp": 0.0,
+            "fatigue_pp": 0.0,
+            "final": 0.5667222394930314
+          },
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
+          "home_adv": 55.0
+        }
+      ],
+      "build_note": "updated 0 finals"
+    },
+    "2026-02-18": {
+      "picks": [
+        {
+          "gamePk": 2025090023,
+          "home_name": "TBD",
+          "away_name": "TBD",
+          "home_elo": 1500.0,
+          "away_elo": 1500.0,
+          "pick_name": "TBD",
+          "win_prob": 0.5667222394930314,
+          "factors": "HomeAdv 55 + wOppAdj form +0/+0 + Rest +0/+0",
+          "why": {
+            "base": 0.5,
+            "home_ice_pp": 6.6722239493031354,
+            "form_pp": 0.0,
+            "fatigue_pp": 0.0,
+            "final": 0.5667222394930314
+          },
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
+          "home_adv": 55.0
+        },
+        {
+          "gamePk": 2025090024,
+          "home_name": "TBD",
+          "away_name": "TBD",
+          "home_elo": 1500.0,
+          "away_elo": 1500.0,
+          "pick_name": "TBD",
+          "win_prob": 0.5667222394930314,
+          "factors": "HomeAdv 55 + wOppAdj form +0/+0 + Rest +0/+0",
+          "why": {
+            "base": 0.5,
+            "home_ice_pp": 6.6722239493031354,
+            "form_pp": 0.0,
+            "fatigue_pp": 0.0,
+            "final": 0.5667222394930314
+          },
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
+          "home_adv": 55.0
+        },
+        {
+          "gamePk": 2025090025,
           "home_name": "TBD",
           "away_name": "TBD",
           "home_elo": 1500.0,
