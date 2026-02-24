@@ -1,23 +1,19 @@
 {
-  "generated_at": "2026-02-23T13:41:36.904415Z",
+  "generated_at": "2026-02-24T13:44:03.686807Z",
   "dates": [
-    "2026-02-23",
     "2026-02-24",
     "2026-02-25",
     "2026-02-26",
     "2026-02-27",
     "2026-02-28",
     "2026-03-01",
-    "2026-03-02"
+    "2026-03-02",
+    "2026-03-03"
   ],
   "by_date": {
-    "2026-02-23": {
-      "picks": [],
-      "build_note": "updated 1 finals"
-    },
     "2026-02-24": {
       "picks": [],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-02-25": {
       "picks": [
@@ -88,7 +84,7 @@
           "home_adv": 53.559947410497266
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-02-26": {
       "picks": [
@@ -159,7 +155,7 @@
           "home_adv": 54.06211299456081
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-02-27": {
       "picks": [
@@ -230,7 +226,7 @@
           "home_adv": 51.29672104977907
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-02-28": {
       "picks": [
@@ -301,7 +297,7 @@
           "home_adv": 53.559947410497266
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-03-01": {
       "picks": [
@@ -372,7 +368,7 @@
           "home_adv": 43.96250543874007
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-03-02": {
       "picks": [
@@ -443,7 +439,78 @@
           "home_adv": 28.19937481860395
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
+    },
+    "2026-03-03": {
+      "picks": [
+        {
+          "gamePk": 2025020963,
+          "home_name": "Columbus",
+          "away_name": "Nashville",
+          "home_elo": 1532.3264213951936,
+          "away_elo": 1454.3381148567046,
+          "pick_name": "Columbus",
+          "win_prob": 0.657408017012482,
+          "factors": "HomeAdv 57 + wOppAdj form +0/+0 + Rest +0/+0",
+          "why": {
+            "base": 0.5938284520608159,
+            "home_ice_pp": 6.357956495166606,
+            "form_pp": 0.0,
+            "fatigue_pp": 0.0,
+            "final": 0.657408017012482
+          },
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
+          "home_adv": 57.113392115597115
+        },
+        {
+          "gamePk": 2025020960,
+          "home_name": "Buffalo",
+          "away_name": "Vegas",
+          "home_elo": 1575.6013862342916,
+          "away_elo": 1504.746264210091,
+          "pick_name": "Buffalo",
+          "win_prob": 0.6493870205255923,
+          "factors": "HomeAdv 57 + wOppAdj form +0/+0 + Rest +0/+0",
+          "why": {
+            "base": 0.5854914726198892,
+            "home_ice_pp": 6.3895547905703065,
+            "form_pp": 0.0,
+            "fatigue_pp": 0.0,
+            "final": 0.6493870205255923
+          },
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
+          "home_adv": 56.7068585982024
+        },
+        {
+          "gamePk": 2025020968,
+          "home_name": "Anaheim",
+          "away_name": "Colorado",
+          "home_elo": 1471.9795081075426,
+          "away_elo": 1613.9335882527516,
+          "pick_name": "Colorado",
+          "win_prob": 0.5993989684329468,
+          "factors": "Road pick vs HomeAdv 59 + wOppAdj form +0/+0 + Rest +0/+0",
+          "why": {
+            "base": 0.6645869842089194,
+            "home_ice_pp": -6.518801577597255,
+            "form_pp": -0.0,
+            "fatigue_pp": -0.0,
+            "final": 0.5993989684329468
+          },
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
+          "home_adv": 59.16365752446936
+        }
+      ],
+      "build_note": "updated 0 finals"
     }
   },
   "notes": {
