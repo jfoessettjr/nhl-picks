@@ -1,43 +1,16 @@
 {
-  "generated_at": "2026-05-13T15:14:04.930479Z",
+  "generated_at": "2026-05-14T14:41:01.703571Z",
   "dates": [
-    "2026-05-13",
     "2026-05-14",
     "2026-05-15",
     "2026-05-16",
     "2026-05-17",
     "2026-05-18",
     "2026-05-19",
-    "2026-05-20"
+    "2026-05-20",
+    "2026-05-21"
   ],
   "by_date": {
-    "2026-05-13": {
-      "picks": [
-        {
-          "gamePk": 2025030235,
-          "home_name": "Colorado",
-          "away_name": "Minnesota",
-          "home_elo": 1649.9619697074043,
-          "away_elo": 1572.3775138188207,
-          "pick_name": "Colorado",
-          "win_prob": 0.6481285578369509,
-          "factors": "HomeAdv 49 + wOppAdj form +0/+0 + Rest +0/+0",
-          "why": {
-            "base": 0.5933584003606293,
-            "home_ice_pp": 5.477015747632164,
-            "form_pp": 0.0,
-            "fatigue_pp": 0.0,
-            "final": 0.6481285578369509
-          },
-          "form_home": "+0",
-          "form_away": "+0",
-          "fat_home": "+0",
-          "fat_away": "+0",
-          "home_adv": 48.805098573323974
-        }
-      ],
-      "build_note": "updated 2 finals"
-    },
     "2026-05-14": {
       "picks": [
         {
@@ -47,19 +20,19 @@
           "home_elo": 1619.832536608528,
           "away_elo": 1600.015611055748,
           "pick_name": "Buffalo",
-          "win_prob": 0.6750768348563115,
-          "factors": "HomeAdv 52 + wOppAdj form +40/-40 + Rest -15/-15",
+          "win_prob": 0.5870220747289682,
+          "factors": "HomeAdv 52 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
             "base": 0.524214767502916,
             "home_ice_pp": 6.280730722605221,
-            "form_pp": 8.805476012734337,
+            "form_pp": 0.0,
             "fatigue_pp": 0.0,
-            "final": 0.6750768348563115
+            "final": 0.5870220747289682
           },
-          "form_home": "+40",
-          "form_away": "-40",
-          "fat_home": "-15",
-          "fat_away": "-15",
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
           "home_adv": 52.3432142097449
         },
         {
@@ -68,51 +41,28 @@
           "away_name": "Vegas",
           "home_elo": 1473.334926001623,
           "away_elo": 1529.2065048133431,
-          "pick_name": "Vegas",
-          "win_prob": 0.5894995905500878,
-          "factors": "Road pick vs HomeAdv 56 + wOppAdj form +37/-37 + Rest -15/-15",
+          "pick_name": "Anaheim",
+          "win_prob": 0.5002088593653279,
+          "factors": "HomeAdv 56 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
-            "base": 0.5677617077227544,
-            "home_ice_pp": -6.797056708808224,
-            "form_pp": 8.970844991541572,
-            "fatigue_pp": -0.0,
-            "final": 0.5894995905500878
-          },
-          "form_home": "-37",
-          "form_away": "+37",
-          "fat_home": "-15",
-          "fat_away": "-15",
-          "home_adv": 56.04232041578199
-        }
-      ],
-      "build_note": "updated 2 finals"
-    },
-    "2026-05-15": {
-      "picks": [
-        {
-          "gamePk": 2025030236,
-          "home_name": "Minnesota",
-          "away_name": "Colorado",
-          "home_elo": 1572.3775138188207,
-          "away_elo": 1649.9619697074043,
-          "pick_name": "Colorado",
-          "win_prob": 0.5362533252431836,
-          "factors": "Road pick vs HomeAdv 48 + wOppAdj form +0/+0 + Rest +0/+0",
-          "why": {
-            "base": 0.5933584003606293,
-            "home_ice_pp": -5.710507511744561,
-            "form_pp": -0.0,
-            "fatigue_pp": -0.0,
-            "final": 0.5362533252431836
+            "base": 0.43223829227724564,
+            "home_ice_pp": 6.797056708808224,
+            "form_pp": 0.0,
+            "fatigue_pp": 0.0,
+            "final": 0.5002088593653279
           },
           "form_home": "+0",
           "form_away": "+0",
           "fat_home": "+0",
           "fat_away": "+0",
-          "home_adv": 47.87532674121421
+          "home_adv": 56.04232041578199
         }
       ],
-      "build_note": "updated 2 finals"
+      "build_note": "updated 1 finals"
+    },
+    "2026-05-15": {
+      "picks": [],
+      "build_note": "updated 1 finals"
     },
     "2026-05-16": {
       "picks": [
@@ -123,19 +73,19 @@
           "home_elo": 1529.2065048133431,
           "away_elo": 1473.334926001623,
           "pick_name": "Vegas",
-          "win_prob": 0.7031257113374899,
-          "factors": "HomeAdv 50 + wOppAdj form +37/-37 + Rest -15/-15",
+          "win_prob": 0.6261518777209027,
+          "factors": "HomeAdv 50 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
             "base": 0.5677617077227544,
             "home_ice_pp": 5.839016999814839,
-            "form_pp": 7.697383361658716,
+            "form_pp": 0.0,
             "fatigue_pp": 0.0,
-            "final": 0.7031257113374899
+            "final": 0.6261518777209027
           },
-          "form_home": "+37",
-          "form_away": "-37",
-          "fat_home": "-15",
-          "fat_away": "-15",
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
           "home_adv": 50.45672516017385
         },
         {
@@ -144,51 +94,28 @@
           "away_name": "Buffalo",
           "home_elo": 1600.015611055748,
           "away_elo": 1619.832536608528,
-          "pick_name": "Buffalo",
-          "win_prob": 0.5628263517239643,
-          "factors": "Road pick vs HomeAdv 48 + wOppAdj form +40/-40 + Rest -15/-15",
+          "pick_name": "Montr\u00e9al",
+          "win_prob": 0.5344937363193876,
+          "factors": "HomeAdv 48 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
-            "base": 0.5242147675029158,
-            "home_ice_pp": -5.870850382230347,
-            "form_pp": 9.73200880433519,
-            "fatigue_pp": -0.0,
-            "final": 0.5628263517239643
-          },
-          "form_home": "-40",
-          "form_away": "+40",
-          "fat_home": "-15",
-          "fat_away": "-15",
-          "home_adv": 48.07756206565439
-        }
-      ],
-      "build_note": "updated 2 finals"
-    },
-    "2026-05-17": {
-      "picks": [
-        {
-          "gamePk": 2025030237,
-          "home_name": "Colorado",
-          "away_name": "Minnesota",
-          "home_elo": 1649.9619697074043,
-          "away_elo": 1572.3775138188207,
-          "pick_name": "Colorado",
-          "win_prob": 0.6481285578369509,
-          "factors": "HomeAdv 49 + wOppAdj form +0/+0 + Rest +0/+0",
-          "why": {
-            "base": 0.5933584003606293,
-            "home_ice_pp": 5.477015747632164,
+            "base": 0.4757852324970841,
+            "home_ice_pp": 5.870850382230347,
             "form_pp": 0.0,
             "fatigue_pp": 0.0,
-            "final": 0.6481285578369509
+            "final": 0.5344937363193876
           },
           "form_home": "+0",
           "form_away": "+0",
           "fat_home": "+0",
           "fat_away": "+0",
-          "home_adv": 48.805098573323974
+          "home_adv": 48.07756206565439
         }
       ],
-      "build_note": "updated 2 finals"
+      "build_note": "updated 1 finals"
+    },
+    "2026-05-17": {
+      "picks": [],
+      "build_note": "updated 1 finals"
     },
     "2026-05-18": {
       "picks": [
@@ -199,31 +126,35 @@
           "home_elo": 1619.832536608528,
           "away_elo": 1600.015611055748,
           "pick_name": "Buffalo",
-          "win_prob": 0.6750768348563115,
-          "factors": "HomeAdv 52 + wOppAdj form +40/-40 + Rest -15/-15",
+          "win_prob": 0.5870220747289682,
+          "factors": "HomeAdv 52 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
             "base": 0.524214767502916,
             "home_ice_pp": 6.280730722605221,
-            "form_pp": 8.805476012734337,
+            "form_pp": 0.0,
             "fatigue_pp": 0.0,
-            "final": 0.6750768348563115
+            "final": 0.5870220747289682
           },
-          "form_home": "+40",
-          "form_away": "-40",
-          "fat_home": "-15",
-          "fat_away": "-15",
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
           "home_adv": 52.3432142097449
         }
       ],
-      "build_note": "updated 2 finals"
+      "build_note": "updated 1 finals"
     },
     "2026-05-19": {
       "picks": [],
-      "build_note": "updated 2 finals"
+      "build_note": "updated 1 finals"
     },
     "2026-05-20": {
       "picks": [],
-      "build_note": "updated 2 finals"
+      "build_note": "updated 1 finals"
+    },
+    "2026-05-21": {
+      "picks": [],
+      "build_note": "updated 1 finals"
     }
   },
   "notes": {
