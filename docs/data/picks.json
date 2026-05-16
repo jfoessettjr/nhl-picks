@@ -1,20 +1,16 @@
 {
-  "generated_at": "2026-05-15T14:36:01.958836Z",
+  "generated_at": "2026-05-16T14:00:06.111160Z",
   "dates": [
-    "2026-05-15",
     "2026-05-16",
     "2026-05-17",
     "2026-05-18",
     "2026-05-19",
     "2026-05-20",
     "2026-05-21",
-    "2026-05-22"
+    "2026-05-22",
+    "2026-05-23"
   ],
   "by_date": {
-    "2026-05-15": {
-      "picks": [],
-      "build_note": "updated 2 finals"
-    },
     "2026-05-16": {
       "picks": [
         {
@@ -24,27 +20,27 @@
           "home_elo": 1612.9524729740867,
           "away_elo": 1606.8956746901893,
           "pick_name": "Montr\u00e9al",
-          "win_prob": 0.6563859895855743,
-          "factors": "HomeAdv 48 + wOppAdj form +40/-40 + Rest -15/-15",
+          "win_prob": 0.5656890437135883,
+          "factors": "HomeAdv 48 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
             "base": 0.507408217940643,
             "home_ice_pp": 5.828082577294536,
-            "form_pp": 9.069694587198596,
+            "form_pp": 0.0,
             "fatigue_pp": 0.0,
-            "final": 0.6563859895855743
+            "final": 0.5656890437135883
           },
-          "form_home": "+40",
-          "form_away": "-40",
-          "fat_home": "-15",
-          "fat_away": "-15",
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
           "home_adv": 48.07756206565439
         }
       ],
-      "build_note": "updated 2 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-17": {
       "picks": [],
-      "build_note": "updated 2 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-18": {
       "picks": [
@@ -54,28 +50,28 @@
           "away_name": "Montr\u00e9al",
           "home_elo": 1606.8956746901893,
           "away_elo": 1612.9524729740867,
-          "pick_name": "Montr\u00e9al",
-          "win_prob": 0.54283127383681,
-          "factors": "Road pick vs HomeAdv 51 + wOppAdj form +40/-40 + Rest -15/-15",
+          "pick_name": "Buffalo",
+          "win_prob": 0.5545796431239254,
+          "factors": "HomeAdv 51 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
-            "base": 0.507408217940643,
-            "home_ice_pp": -6.198786106456838,
-            "form_pp": 9.741091696073534,
-            "fatigue_pp": -0.0,
-            "final": 0.54283127383681
+            "base": 0.492591782059357,
+            "home_ice_pp": 6.198786106456838,
+            "form_pp": 0.0,
+            "fatigue_pp": 0.0,
+            "final": 0.5545796431239254
           },
-          "form_home": "-40",
-          "form_away": "+40",
-          "fat_home": "-15",
-          "fat_away": "-15",
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
           "home_adv": 50.923156027304294
         }
       ],
-      "build_note": "updated 2 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-19": {
       "picks": [],
-      "build_note": "updated 2 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-20": {
       "picks": [
@@ -86,27 +82,27 @@
           "home_elo": 1651.805007894301,
           "away_elo": 1540.3014488009512,
           "pick_name": "Colorado",
-          "win_prob": 0.6581916802577518,
-          "factors": "HomeAdv 49 + wOppAdj form +0/+40 + Rest +0/-15",
+          "win_prob": 0.683805812251831,
+          "factors": "HomeAdv 49 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
             "base": 0.6318988938130466,
             "home_ice_pp": 5.190691843878437,
-            "form_pp": -4.166876293519406,
-            "fatigue_pp": 1.6054630941114811,
-            "final": 0.6581916802577518
+            "form_pp": 0.0,
+            "fatigue_pp": 0.0,
+            "final": 0.683805812251831
           },
           "form_home": "+0",
-          "form_away": "+40",
+          "form_away": "+0",
           "fat_home": "+0",
-          "fat_away": "-15",
+          "fat_away": "+0",
           "home_adv": 49.341221679183576
         }
       ],
-      "build_note": "updated 2 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-21": {
       "picks": [],
-      "build_note": "updated 2 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-22": {
       "picks": [
@@ -117,23 +113,27 @@
           "home_elo": 1651.805007894301,
           "away_elo": 1540.3014488009512,
           "pick_name": "Colorado",
-          "win_prob": 0.6581916802577518,
-          "factors": "HomeAdv 49 + wOppAdj form +0/+40 + Rest +0/-15",
+          "win_prob": 0.683805812251831,
+          "factors": "HomeAdv 49 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
             "base": 0.6318988938130466,
             "home_ice_pp": 5.190691843878437,
-            "form_pp": -4.166876293519406,
-            "fatigue_pp": 1.6054630941114811,
-            "final": 0.6581916802577518
+            "form_pp": 0.0,
+            "fatigue_pp": 0.0,
+            "final": 0.683805812251831
           },
           "form_home": "+0",
-          "form_away": "+40",
+          "form_away": "+0",
           "fat_home": "+0",
-          "fat_away": "-15",
+          "fat_away": "+0",
           "home_adv": 49.341221679183576
         }
       ],
-      "build_note": "updated 2 finals"
+      "build_note": "updated 0 finals"
+    },
+    "2026-05-23": {
+      "picks": [],
+      "build_note": "updated 0 finals"
     }
   },
   "notes": {
