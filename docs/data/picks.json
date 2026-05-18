@@ -1,20 +1,16 @@
 {
-  "generated_at": "2026-05-17T13:57:20.393928Z",
+  "generated_at": "2026-05-18T15:56:10.300116Z",
   "dates": [
-    "2026-05-17",
     "2026-05-18",
     "2026-05-19",
     "2026-05-20",
     "2026-05-21",
     "2026-05-22",
     "2026-05-23",
-    "2026-05-24"
+    "2026-05-24",
+    "2026-05-25"
   ],
   "by_date": {
-    "2026-05-17": {
-      "picks": [],
-      "build_note": "updated 1 finals"
-    },
     "2026-05-18": {
       "picks": [
         {
@@ -24,27 +20,27 @@
           "home_elo": 1619.3926743026652,
           "away_elo": 1600.4554733616108,
           "pick_name": "Buffalo",
-          "win_prob": 0.6727346754210115,
-          "factors": "HomeAdv 51 + wOppAdj form +40/-40 + Rest -15/-15",
+          "win_prob": 0.5843231965386894,
+          "factors": "HomeAdv 51 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
             "base": 0.5231419867333484,
             "home_ice_pp": 6.118120980534092,
-            "form_pp": 8.841147888232214,
+            "form_pp": 0.0,
             "fatigue_pp": 0.0,
-            "final": 0.6727346754210115
+            "final": 0.5843231965386894
           },
-          "form_home": "+40",
-          "form_away": "-40",
-          "fat_home": "-15",
-          "fat_away": "-15",
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
           "home_adv": 50.923156027304294
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-19": {
       "picks": [],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-20": {
       "picks": [
@@ -71,7 +67,7 @@
           "home_adv": 49.341221679183576
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-21": {
       "picks": [
@@ -98,7 +94,7 @@
           "home_adv": 63.22174476256052
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-22": {
       "picks": [
@@ -125,7 +121,7 @@
           "home_adv": 49.341221679183576
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-23": {
       "picks": [
@@ -152,7 +148,7 @@
           "home_adv": 63.22174476256052
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-24": {
       "picks": [
@@ -179,7 +175,34 @@
           "home_adv": 50.45672516017385
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
+    },
+    "2026-05-25": {
+      "picks": [
+        {
+          "gamePk": 2025030313,
+          "home_name": "TBD",
+          "away_name": "Carolina",
+          "home_elo": 1500.0,
+          "away_elo": 1651.1249953865088,
+          "pick_name": "Carolina",
+          "win_prob": 0.6146736173445404,
+          "factors": "Road pick vs HomeAdv 55 + wOppAdj form +0/+0 + Rest +0/+0",
+          "why": {
+            "base": 0.6740241869227168,
+            "home_ice_pp": -5.935056957817647,
+            "form_pp": -0.0,
+            "fatigue_pp": -0.0,
+            "final": 0.6146736173445404
+          },
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
+          "home_adv": 55.0
+        }
+      ],
+      "build_note": "updated 0 finals"
     }
   },
   "notes": {
