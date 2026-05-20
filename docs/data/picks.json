@@ -1,20 +1,16 @@
 {
-  "generated_at": "2026-05-19T15:49:51.192963Z",
+  "generated_at": "2026-05-20T15:56:27.888379Z",
   "dates": [
-    "2026-05-19",
     "2026-05-20",
     "2026-05-21",
     "2026-05-22",
     "2026-05-23",
     "2026-05-24",
     "2026-05-25",
-    "2026-05-26"
+    "2026-05-26",
+    "2026-05-27"
   ],
   "by_date": {
-    "2026-05-19": {
-      "picks": [],
-      "build_note": "updated 1 finals"
-    },
     "2026-05-20": {
       "picks": [
         {
@@ -40,7 +36,7 @@
           "home_adv": 49.341221679183576
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-21": {
       "picks": [
@@ -51,23 +47,23 @@
           "home_elo": 1651.1249953865088,
           "away_elo": 1605.2839748316226,
           "pick_name": "Carolina",
-          "win_prob": 0.6008689595959664,
-          "factors": "HomeAdv 63 + wOppAdj form +0/+40 + Rest +0/-15",
+          "win_prob": 0.6291949203714561,
+          "factors": "HomeAdv 63 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
             "base": 0.5557518092904201,
             "home_ice_pp": 7.3443111081035966,
-            "form_pp": -4.580939482866874,
-            "fatigue_pp": 1.7483434053179092,
-            "final": 0.6008689595959664
+            "form_pp": 0.0,
+            "fatigue_pp": 0.0,
+            "final": 0.6291949203714561
           },
           "form_home": "+0",
-          "form_away": "+40",
+          "form_away": "+0",
           "fat_home": "+0",
-          "fat_away": "-15",
+          "fat_away": "+0",
           "home_adv": 63.22174476256052
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-22": {
       "picks": [
@@ -94,7 +90,7 @@
           "home_adv": 49.341221679183576
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-23": {
       "picks": [
@@ -105,23 +101,23 @@
           "home_elo": 1651.1249953865088,
           "away_elo": 1605.2839748316226,
           "pick_name": "Carolina",
-          "win_prob": 0.6008689595959664,
-          "factors": "HomeAdv 63 + wOppAdj form +0/+40 + Rest +0/-15",
+          "win_prob": 0.6291949203714561,
+          "factors": "HomeAdv 63 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
             "base": 0.5557518092904201,
             "home_ice_pp": 7.3443111081035966,
-            "form_pp": -4.580939482866874,
-            "fatigue_pp": 1.7483434053179092,
-            "final": 0.6008689595959664
+            "form_pp": 0.0,
+            "fatigue_pp": 0.0,
+            "final": 0.6291949203714561
           },
           "form_home": "+0",
-          "form_away": "+40",
+          "form_away": "+0",
           "fat_home": "+0",
-          "fat_away": "-15",
+          "fat_away": "+0",
           "home_adv": 63.22174476256052
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-24": {
       "picks": [
@@ -148,7 +144,7 @@
           "home_adv": 50.45672516017385
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-25": {
       "picks": [
@@ -159,23 +155,23 @@
           "home_elo": 1605.2839748316226,
           "away_elo": 1651.1249953865088,
           "pick_name": "Montr\u00e9al",
-          "win_prob": 0.5316746141968649,
-          "factors": "HomeAdv 47 + wOppAdj form +40/+0 + Rest -15/+0",
+          "win_prob": 0.5011522448601338,
+          "factors": "HomeAdv 47 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
             "base": 0.4442481907095799,
             "home_ice_pp": 5.690405415055388,
-            "form_pp": 4.86993966762157,
-            "fatigue_pp": -1.8177027339484564,
-            "final": 0.5316746141968649
+            "form_pp": 0.0,
+            "fatigue_pp": 0.0,
+            "final": 0.5011522448601338
           },
-          "form_home": "+40",
+          "form_home": "+0",
           "form_away": "+0",
-          "fat_home": "-15",
+          "fat_home": "+0",
           "fat_away": "+0",
           "home_adv": 46.78297784551214
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-05-26": {
       "picks": [
@@ -202,7 +198,34 @@
           "home_adv": 50.45672516017385
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
+    },
+    "2026-05-27": {
+      "picks": [
+        {
+          "gamePk": 2025030314,
+          "home_name": "Montr\u00e9al",
+          "away_name": "Carolina",
+          "home_elo": 1605.2839748316226,
+          "away_elo": 1651.1249953865088,
+          "pick_name": "Montr\u00e9al",
+          "win_prob": 0.5011522448601338,
+          "factors": "HomeAdv 47 + wOppAdj form +0/+0 + Rest +0/+0",
+          "why": {
+            "base": 0.4442481907095799,
+            "home_ice_pp": 5.690405415055388,
+            "form_pp": 0.0,
+            "fatigue_pp": 0.0,
+            "final": 0.5011522448601338
+          },
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
+          "home_adv": 46.78297784551214
+        }
+      ],
+      "build_note": "updated 0 finals"
     }
   },
   "notes": {
