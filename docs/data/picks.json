@@ -1,46 +1,19 @@
 {
-  "generated_at": "2026-06-02T16:54:49.725157Z",
+  "generated_at": "2026-06-03T17:17:49.645076Z",
   "dates": [
-    "2026-06-02",
     "2026-06-03",
     "2026-06-04",
     "2026-06-05",
     "2026-06-06",
     "2026-06-07",
     "2026-06-08",
-    "2026-06-09"
+    "2026-06-09",
+    "2026-06-10"
   ],
   "by_date": {
-    "2026-06-02": {
-      "picks": [
-        {
-          "gamePk": 2025030411,
-          "home_name": "Carolina",
-          "away_name": "Vegas",
-          "home_elo": 1662.6871525622887,
-          "away_elo": 1577.9533852309544,
-          "pick_name": "Carolina",
-          "win_prob": 0.6702108752687577,
-          "factors": "HomeAdv 63 + wOppAdj form +0/+0 + Rest +0/+0",
-          "why": {
-            "base": 0.6016431703374493,
-            "home_ice_pp": 6.856770493130837,
-            "form_pp": 0.0,
-            "fatigue_pp": 0.0,
-            "final": 0.6702108752687577
-          },
-          "form_home": "+0",
-          "form_away": "+0",
-          "fat_home": "+0",
-          "fat_away": "+0",
-          "home_adv": 62.66222100471209
-        }
-      ],
-      "build_note": "updated 0 finals"
-    },
     "2026-06-03": {
       "picks": [],
-      "build_note": "updated 0 finals"
+      "build_note": "updated 1 finals"
     },
     "2026-06-04": {
       "picks": [
@@ -48,30 +21,30 @@
           "gamePk": 2025030412,
           "home_name": "Carolina",
           "away_name": "Vegas",
-          "home_elo": 1662.6871525622887,
-          "away_elo": 1577.9533852309544,
+          "home_elo": 1655.408789784101,
+          "away_elo": 1585.2317480091422,
           "pick_name": "Carolina",
-          "win_prob": 0.6702108752687577,
-          "factors": "HomeAdv 63 + wOppAdj form +0/+0 + Rest +0/+0",
+          "win_prob": 0.5620044686712572,
+          "factors": "HomeAdv 61 + wOppAdj form -40/+40 + Rest -15/-15",
           "why": {
-            "base": 0.6016431703374493,
-            "home_ice_pp": 6.856770493130837,
-            "form_pp": 0.0,
+            "base": 0.5846952637210433,
+            "home_ice_pp": 6.842087643235628,
+            "form_pp": -9.11116714821424,
             "fatigue_pp": 0.0,
-            "final": 0.6702108752687577
+            "final": 0.5620044686712572
           },
-          "form_home": "+0",
-          "form_away": "+0",
-          "fat_home": "+0",
-          "fat_away": "+0",
-          "home_adv": 62.66222100471209
+          "form_home": "-40",
+          "form_away": "+40",
+          "fat_home": "-15",
+          "fat_away": "-15",
+          "home_adv": 60.875625255862104
         }
       ],
-      "build_note": "updated 0 finals"
+      "build_note": "updated 1 finals"
     },
     "2026-06-05": {
       "picks": [],
-      "build_note": "updated 0 finals"
+      "build_note": "updated 1 finals"
     },
     "2026-06-06": {
       "picks": [
@@ -79,34 +52,34 @@
           "gamePk": 2025030413,
           "home_name": "Vegas",
           "away_name": "Carolina",
-          "home_elo": 1577.9533852309544,
-          "away_elo": 1662.6871525622887,
-          "pick_name": "Carolina",
-          "win_prob": 0.5387817882802697,
-          "factors": "Road pick vs HomeAdv 53 + wOppAdj form +0/+0 + Rest +0/+0",
+          "home_elo": 1585.2317480091422,
+          "away_elo": 1655.408789784101,
+          "pick_name": "Vegas",
+          "win_prob": 0.5759519577387282,
+          "factors": "HomeAdv 53 + wOppAdj form +40/-40 + Rest -15/-15",
           "why": {
-            "base": 0.6016431703374492,
-            "home_ice_pp": -6.286138205717961,
-            "form_pp": -0.0,
-            "fatigue_pp": -0.0,
-            "final": 0.5387817882802697
+            "base": 0.4153047362789567,
+            "home_ice_pp": 6.362906030049681,
+            "form_pp": 9.70181611592747,
+            "fatigue_pp": 0.0,
+            "final": 0.5759519577387282
           },
-          "form_home": "+0",
-          "form_away": "+0",
-          "fat_home": "+0",
-          "fat_away": "+0",
+          "form_home": "+40",
+          "form_away": "-40",
+          "fat_home": "-15",
+          "fat_away": "-15",
           "home_adv": 52.941390456174524
         }
       ],
-      "build_note": "updated 0 finals"
+      "build_note": "updated 1 finals"
     },
     "2026-06-07": {
       "picks": [],
-      "build_note": "updated 0 finals"
+      "build_note": "updated 1 finals"
     },
     "2026-06-08": {
       "picks": [],
-      "build_note": "updated 0 finals"
+      "build_note": "updated 1 finals"
     },
     "2026-06-09": {
       "picks": [
@@ -114,26 +87,30 @@
           "gamePk": 2025030414,
           "home_name": "Vegas",
           "away_name": "Carolina",
-          "home_elo": 1577.9533852309544,
-          "away_elo": 1662.6871525622887,
-          "pick_name": "Carolina",
-          "win_prob": 0.5387817882802697,
-          "factors": "Road pick vs HomeAdv 53 + wOppAdj form +0/+0 + Rest +0/+0",
+          "home_elo": 1585.2317480091422,
+          "away_elo": 1655.408789784101,
+          "pick_name": "Vegas",
+          "win_prob": 0.5759519577387282,
+          "factors": "HomeAdv 53 + wOppAdj form +40/-40 + Rest -15/-15",
           "why": {
-            "base": 0.6016431703374492,
-            "home_ice_pp": -6.286138205717961,
-            "form_pp": -0.0,
-            "fatigue_pp": -0.0,
-            "final": 0.5387817882802697
+            "base": 0.4153047362789567,
+            "home_ice_pp": 6.362906030049681,
+            "form_pp": 9.70181611592747,
+            "fatigue_pp": 0.0,
+            "final": 0.5759519577387282
           },
-          "form_home": "+0",
-          "form_away": "+0",
-          "fat_home": "+0",
-          "fat_away": "+0",
+          "form_home": "+40",
+          "form_away": "-40",
+          "fat_home": "-15",
+          "fat_away": "-15",
           "home_adv": 52.941390456174524
         }
       ],
-      "build_note": "updated 0 finals"
+      "build_note": "updated 1 finals"
+    },
+    "2026-06-10": {
+      "picks": [],
+      "build_note": "updated 1 finals"
     }
   },
   "notes": {
