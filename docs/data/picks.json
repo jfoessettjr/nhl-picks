@@ -1,20 +1,16 @@
 {
-  "generated_at": "2026-06-03T17:17:49.645076Z",
+  "generated_at": "2026-06-04T15:43:59.511417Z",
   "dates": [
-    "2026-06-03",
     "2026-06-04",
     "2026-06-05",
     "2026-06-06",
     "2026-06-07",
     "2026-06-08",
     "2026-06-09",
-    "2026-06-10"
+    "2026-06-10",
+    "2026-06-11"
   ],
   "by_date": {
-    "2026-06-03": {
-      "picks": [],
-      "build_note": "updated 1 finals"
-    },
     "2026-06-04": {
       "picks": [
         {
@@ -24,27 +20,27 @@
           "home_elo": 1655.408789784101,
           "away_elo": 1585.2317480091422,
           "pick_name": "Carolina",
-          "win_prob": 0.5620044686712572,
-          "factors": "HomeAdv 61 + wOppAdj form -40/+40 + Rest -15/-15",
+          "win_prob": 0.6531161401533996,
+          "factors": "HomeAdv 61 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
             "base": 0.5846952637210433,
             "home_ice_pp": 6.842087643235628,
-            "form_pp": -9.11116714821424,
+            "form_pp": 0.0,
             "fatigue_pp": 0.0,
-            "final": 0.5620044686712572
+            "final": 0.6531161401533996
           },
-          "form_home": "-40",
-          "form_away": "+40",
-          "fat_home": "-15",
-          "fat_away": "-15",
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
           "home_adv": 60.875625255862104
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-06-05": {
       "picks": [],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-06-06": {
       "picks": [
@@ -54,32 +50,32 @@
           "away_name": "Carolina",
           "home_elo": 1585.2317480091422,
           "away_elo": 1655.408789784101,
-          "pick_name": "Vegas",
-          "win_prob": 0.5759519577387282,
-          "factors": "HomeAdv 53 + wOppAdj form +40/-40 + Rest -15/-15",
+          "pick_name": "Carolina",
+          "win_prob": 0.5210662034205464,
+          "factors": "Road pick vs HomeAdv 53 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
-            "base": 0.4153047362789567,
-            "home_ice_pp": 6.362906030049681,
-            "form_pp": 9.70181611592747,
-            "fatigue_pp": 0.0,
-            "final": 0.5759519577387282
+            "base": 0.5846952637210433,
+            "home_ice_pp": -6.362906030049681,
+            "form_pp": -0.0,
+            "fatigue_pp": -0.0,
+            "final": 0.5210662034205464
           },
-          "form_home": "+40",
-          "form_away": "-40",
-          "fat_home": "-15",
-          "fat_away": "-15",
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
           "home_adv": 52.941390456174524
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-06-07": {
       "picks": [],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-06-08": {
       "picks": [],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-06-09": {
       "picks": [
@@ -89,28 +85,55 @@
           "away_name": "Carolina",
           "home_elo": 1585.2317480091422,
           "away_elo": 1655.408789784101,
-          "pick_name": "Vegas",
-          "win_prob": 0.5759519577387282,
-          "factors": "HomeAdv 53 + wOppAdj form +40/-40 + Rest -15/-15",
+          "pick_name": "Carolina",
+          "win_prob": 0.5210662034205464,
+          "factors": "Road pick vs HomeAdv 53 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
-            "base": 0.4153047362789567,
-            "home_ice_pp": 6.362906030049681,
-            "form_pp": 9.70181611592747,
-            "fatigue_pp": 0.0,
-            "final": 0.5759519577387282
+            "base": 0.5846952637210433,
+            "home_ice_pp": -6.362906030049681,
+            "form_pp": -0.0,
+            "fatigue_pp": -0.0,
+            "final": 0.5210662034205464
           },
-          "form_home": "+40",
-          "form_away": "-40",
-          "fat_home": "-15",
-          "fat_away": "-15",
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
           "home_adv": 52.941390456174524
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-06-10": {
       "picks": [],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
+    },
+    "2026-06-11": {
+      "picks": [
+        {
+          "gamePk": 2025030415,
+          "home_name": "Carolina",
+          "away_name": "Vegas",
+          "home_elo": 1655.408789784101,
+          "away_elo": 1585.2317480091422,
+          "pick_name": "Carolina",
+          "win_prob": 0.6531161401533996,
+          "factors": "HomeAdv 61 + wOppAdj form +0/+0 + Rest +0/+0",
+          "why": {
+            "base": 0.5846952637210433,
+            "home_ice_pp": 6.842087643235628,
+            "form_pp": 0.0,
+            "fatigue_pp": 0.0,
+            "final": 0.6531161401533996
+          },
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
+          "home_adv": 60.875625255862104
+        }
+      ],
+      "build_note": "updated 0 finals"
     }
   },
   "notes": {
