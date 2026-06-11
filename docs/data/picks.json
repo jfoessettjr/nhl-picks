@@ -1,20 +1,16 @@
 {
-  "generated_at": "2026-06-10T16:08:33.646965Z",
+  "generated_at": "2026-06-11T16:20:21.514501Z",
   "dates": [
-    "2026-06-10",
     "2026-06-11",
     "2026-06-12",
     "2026-06-13",
     "2026-06-14",
     "2026-06-15",
     "2026-06-16",
-    "2026-06-17"
+    "2026-06-17",
+    "2026-06-18"
   ],
   "by_date": {
-    "2026-06-10": {
-      "picks": [],
-      "build_note": "updated 1 finals"
-    },
     "2026-06-11": {
       "picks": [
         {
@@ -24,31 +20,31 @@
           "home_elo": 1661.4656562267194,
           "away_elo": 1579.1748815665237,
           "pick_name": "Carolina",
-          "win_prob": 0.7410141990458167,
-          "factors": "HomeAdv 61 + wOppAdj form +40/-40 + Rest -15/-15",
+          "win_prob": 0.6661705827323808,
+          "factors": "HomeAdv 61 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
             "base": 0.5988210130823897,
             "home_ice_pp": 6.7349569649991174,
-            "form_pp": 7.4843616313435835,
+            "form_pp": 0.0,
             "fatigue_pp": 0.0,
-            "final": 0.7410141990458167
+            "final": 0.6661705827323808
           },
-          "form_home": "+40",
-          "form_away": "-40",
-          "fat_home": "-15",
-          "fat_away": "-15",
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
           "home_adv": 61.188897506865096
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-06-12": {
       "picks": [],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-06-13": {
       "picks": [],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-06-14": {
       "picks": [
@@ -59,31 +55,31 @@
           "home_elo": 1579.1748815665237,
           "away_elo": 1661.4656562267194,
           "pick_name": "Carolina",
-          "win_prob": 0.6297074935271305,
-          "factors": "Road pick vs HomeAdv 53 + wOppAdj form +40/-40 + Rest -15/-15",
+          "win_prob": 0.5360292844009161,
+          "factors": "Road pick vs HomeAdv 53 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
             "base": 0.5988210130823897,
             "home_ice_pp": -6.279172868147354,
-            "form_pp": 9.367820912621443,
+            "form_pp": -0.0,
             "fatigue_pp": -0.0,
-            "final": 0.6297074935271305
+            "final": 0.5360292844009161
           },
-          "form_home": "-40",
-          "form_away": "+40",
-          "fat_home": "-15",
-          "fat_away": "-15",
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
           "home_adv": 52.76613201500819
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-06-15": {
       "picks": [],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-06-16": {
       "picks": [],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
     },
     "2026-06-17": {
       "picks": [
@@ -94,23 +90,27 @@
           "home_elo": 1661.4656562267194,
           "away_elo": 1579.1748815665237,
           "pick_name": "Carolina",
-          "win_prob": 0.7410141990458167,
-          "factors": "HomeAdv 61 + wOppAdj form +40/-40 + Rest -15/-15",
+          "win_prob": 0.6661705827323808,
+          "factors": "HomeAdv 61 + wOppAdj form +0/+0 + Rest +0/+0",
           "why": {
             "base": 0.5988210130823897,
             "home_ice_pp": 6.7349569649991174,
-            "form_pp": 7.4843616313435835,
+            "form_pp": 0.0,
             "fatigue_pp": 0.0,
-            "final": 0.7410141990458167
+            "final": 0.6661705827323808
           },
-          "form_home": "+40",
-          "form_away": "-40",
-          "fat_home": "-15",
-          "fat_away": "-15",
+          "form_home": "+0",
+          "form_away": "+0",
+          "fat_home": "+0",
+          "fat_away": "+0",
           "home_adv": 61.188897506865096
         }
       ],
-      "build_note": "updated 1 finals"
+      "build_note": "updated 0 finals"
+    },
+    "2026-06-18": {
+      "picks": [],
+      "build_note": "updated 0 finals"
     }
   },
   "notes": {
