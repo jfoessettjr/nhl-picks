@@ -1,20 +1,16 @@
 {
-  "generated_at": "2026-06-23T15:24:17.162542Z",
+  "generated_at": "2026-06-24T15:08:17.394231Z",
   "dates": [
-    "2026-06-23",
     "2026-06-24",
     "2026-06-25",
     "2026-06-26",
     "2026-06-27",
     "2026-06-28",
     "2026-06-29",
-    "2026-06-30"
+    "2026-06-30",
+    "2026-07-01"
   ],
   "by_date": {
-    "2026-06-23": {
-      "picks": [],
-      "build_note": "updated 0 finals"
-    },
     "2026-06-24": {
       "picks": [],
       "build_note": "updated 0 finals"
@@ -40,6 +36,10 @@
       "build_note": "updated 0 finals"
     },
     "2026-06-30": {
+      "picks": [],
+      "build_note": "updated 0 finals"
+    },
+    "2026-07-01": {
       "picks": [],
       "build_note": "updated 0 finals"
     }
